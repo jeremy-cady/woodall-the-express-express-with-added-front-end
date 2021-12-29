@@ -1,0 +1,24 @@
+{
+  "name": "woodall-the-express-express-with-added-front-end",
+  "version": "1.0.0",
+  "description": "## Objectives",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremy-cady/woodall-the-express-express-with-added-front-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeremy-cady/woodall-the-express-express-with-added-front-end/issues"
+  },
+  "homepage": "https://github.com/jeremy-cady/woodall-the-express-express-with-added-front-end#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2"
+  }
+}
