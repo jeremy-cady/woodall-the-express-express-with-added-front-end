@@ -20,5 +20,19 @@ app.use(bodyParser.urlencoded({ extended:true }));
 // server listening
 app.listen(port, () => {
     console.log(`Listening on port: ${port}`);
-    
-})
+});
+
+
+// array of trains
+const trains = [
+    { name: 'Thomas', color: 'Blue' },
+    { name: 'Gordon', color: 'Blue' },
+    { name: 'Henry', color: 'Green' },
+    { name: 'James', color: 'Red' }
+];
+
+
+app.get('/trains', (req, res) => {
+    console.log('in GET /trains');
+    res.send(trains);
+});
