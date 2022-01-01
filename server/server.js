@@ -53,12 +53,12 @@ app.post('/trains', (req, res) => {
     console.log(trains);
     console.log('Data is:', req.body);
     
-    let trainName = (req.body.trainName);
-    let trainColor = (req.body.trainColor);
+    let name = (req.body.name);
+    let color = (req.body.color);
 
     const newTrain = {
-        trainName: trainName,
-        trainColor: trainColor
+        name: name,
+        color: color
     }
 
     trains.push(newTrain);

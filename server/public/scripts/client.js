@@ -59,12 +59,12 @@ function refreshLastTrain() {
 
 
 
-function render(trains) {
+function render(state) {
     $('#trainList').empty();
     
-    for(let train of trains) {
+    for(let object of state) {
         $('#trainList').append(`
-            <li>${train.name} is ${train.color}</li>
+            <li>${object.name} is ${object.color}</li>
         `)
     }
 }
@@ -94,7 +94,7 @@ function newTrain() {
         color: $('#colorInput').val()
     }
 
-    console.log(newTrainInput);
+    console.log('input is: ', newTrainInput);
 
     $.ajax({
         method: 'POST',
