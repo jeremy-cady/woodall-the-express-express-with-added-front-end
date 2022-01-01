@@ -36,3 +36,34 @@ app.get('/trains', (req, res) => {
     console.log('in GET /trains');
     res.send(trains);
 });
+
+app.get('/first-train', (req, res) => {
+    console.log('in GET /first-train');
+    res.send(trains[0]);
+    
+});
+
+app.get('/last-train', (req, res) => {
+    console.log('in GET /last-train');
+    res.send(trains[trains.length - 1]);
+    
+});
+
+app.post('/trains', (req, res) => {
+    console.log(trains);
+    console.log('Data is:', req.body);
+    
+    let trainName = (req.body.trainName);
+    let trainColor = (req.body.trainColor);
+
+    const newTrain = {
+        trainName: trainName,
+        trainColor: trainColor
+    }
+
+    trains.push(newTrain);
+    console.log(trains);
+
+    res.sendStatus(201); //CREATED
+    
+})
