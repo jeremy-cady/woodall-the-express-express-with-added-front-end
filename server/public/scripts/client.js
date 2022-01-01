@@ -8,6 +8,7 @@ function onReady() {
     refreshAllTrains();
     refreshFirstTrain();
     refreshLastTrain();
+    $('#addTrain').on('click', newTrain);
 }
 
 
